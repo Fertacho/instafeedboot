@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <title>Instagram feed</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+  <body>
+    <div class="page container">
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-clear border-bottom bg-clear row">
+          <div class="container-fluid">
+            <h1 class="navbar-brand col-8" id="logo" href="#"><img src="instagram-new.png" width="200px"></h1>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-success col-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              New post
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">New Post</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="mb-3">
+                      <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <button type="button" class="btn btn-light"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera" viewBox="0 0 16 16">
+                      <path d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1v6zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2z"/>
+                      <path d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zm0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+                    </svg></button>
+                    <button type="button" class="btn btn-light"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                      <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                      <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    </svg></button>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">Publish</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dropdown mr-2">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Settings
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Privacy</a></li>
+                <li><a class="dropdown-item" href="#">Notifications</a></li>
+                <li><a class="dropdown-item" href="#">Log Out</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+        <div class="row d-flex justify-content-center m-4">
+          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grid" viewBox="0 0 16 16">
+                <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+              </svg></button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-app" viewBox="0 0 16 16">
+                <path d="M11 2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h6zM5 1a4 4 0 0 0-4 4v6a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4H5z"/>
+                </svg>
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+              <div class="container row">
+                <div class="col-4 card  p-0 border-0 bg-light">
+                  <img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2019/11/YuYU-Hakusho.jpg?q=50&fit=crop&w=750&dpr=1.5" height="200px" class="card-img-top" alt="">
+                </div>
+                <div class="col-4 card  p-0 border-0 bg-light">
+                  <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmiro.medium.com%2Fmax%2F2000%2F1*KSkWSc7KgcH-5AHcotRdoA.jpeg&f=1&nofb=1" height="200px" class="card-img-top" alt="">
+                </div>
+                <div class="col-4 card  p-0 border-0 bg-light">
+                  <img src="https://anime.es/wp-content/uploads/sites/36/2021/12/La-segunda-temporada-de-Space-Dandy-se-estrenarC3A1-en-julio-en-JapC3B3n-2-Animemx.jpg" height="200px" class="card-img-top" alt="Dandy">
+                </div> 
+                <div class="col-4 card  p-0 border-0 bg-light">
+                  <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/hc_1440x810/public/media/image/2021/08/naruto-naruto-uzumaki-2425679.jpg?itok=MbBLmASn" height="200px" class="card-img-top" alt="Naruto">
+                </div>
+                <div class="col-4 card  p-0 border-0 bg-light">
+                  <img src="https://cinematicos.net/wp-content/uploads/l-intro-1628775099.jpg" height="200px" class="card-img-top" alt="Lain">
+                </div>
+                <div class="col-4 card  p-0 border-0 bg-light">
+                  <img src="https://www.anmosugoi.com/wp-content/uploads/2021/05/Hitori-Bocchi-no-Marumaru-Seikatsu-no-se-ha-olvidado-de-Bocchi-y-celebra-su-cumpleanos-4.jpg" height="200px" class="card-img-top" alt="Bocchi">
+                </div> 
+                <div class="col-4 card  p-0 border-0 bg-light">
+                  <img src="http://pm1.narvii.com/6527/caa525ae2e5fa14182270ebec83a74350d9496cc_00.jpg" height="200px" class="card-img-top" alt="Sakura">
+                </div>
+                <div class="col-4 card  p-0 border-0 bg-light">
+                  <img src="https://i.pinimg.com/550x/6a/67/ec/6a67ec619d0741ba5ff7f5afcb7ca5e4.jpg" height="200px" class="card-img-top" alt="Yoh">
+                </div>
+                <div class="col-4 card  p-0 border-0 bg-light">
+                  <img src="https://ramenparados.com/wp-content/uploads/2019/02/Hitori-Bocchi-no-Marumaru-Seikatsu7-1000x600.jpeg" height="200px" class="card-img-top" alt="Bocchi">
+                </div> 
+              </div>
+            </div>
+            <div class="tab-pane fade d-flex justify-content-center" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+              <div class="card" style="width: 50rem;">
+                <img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2019/11/YuYU-Hakusho.jpg?q=50&fit=crop&w=750&dpr=1.5" class="card-img-top" alt="YuYU-Hakusho">
+                <div class="card-body">
+                  <h5 class="card-title">YuYU Hakusho</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium maxime et quae voluptatem. Possimus, cumque ratione ut ea odit molestias sed corporis beatae rerum, qui a magni pariatur sunt in.</p>
+                </div>
+                <div class="card" style="width: 50rem;">
+                  <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmiro.medium.com%2Fmax%2F2000%2F1*KSkWSc7KgcH-5AHcotRdoA.jpeg&f=1&nofb=1" class="card-img-top" alt="Dio.">
+                  <div class="card-body">
+                    <h5 class="card-title">Dio</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni magnam provident suscipit repellendus unde excepturi reiciendis eos. Provident, quae similique? Autem alias laborum maiores quam debitis rem ex sunt nemo.</p>
+                  </div>
+                </div>
+                <div class="card" style="width: 50rem;">
+                  <img src="https://anime.es/wp-content/uploads/sites/36/2021/12/La-segunda-temporada-de-Space-Dandy-se-estrenarC3A1-en-julio-en-JapC3B3n-2-Animemx.jpg" class="card-img-top" alt="Dandy">
+                  <div class="card-body">
+                    <h5 class="card-title">Dandy</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam provident odio maxime cumque veniam ut earum accusantium voluptate minima eligendi, et eveniet fuga sint maiores animi ad laborum eaque impedit.</p>
+                  </div>
+                </div>
+                <div class="card" style="width: 50rem;">
+                  <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/hc_1440x810/public/media/image/2021/08/naruto-naruto-uzumaki-2425679.jpg?itok=MbBLmASn" class="card-img-top" alt="Naruto">
+                  <div class="card-body">
+                    <h5 class="card-title">Naruto</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum harum officia perferendis, nam provident consequatur autem id doloremque commodi possimus minus recusandae facere unde quos magni similique molestias quod perspiciatis.
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="width: 50rem;">
+                  <img src="https://cinematicos.net/wp-content/uploads/l-intro-1628775099.jpg" class="card-img-top" alt="Lain">
+                  <div class="card-body">
+                    <h5 class="card-title">Lain</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, tempore! Harum vel similique perferendis ipsam veniam earum, dolore, sequi aliquam ullam asperiores nihil nostrum molestias accusamus iusto dolores quisquam totam.</p>
+                  </div>
+                </div>
+                <div class="card" style="width: 50rem;">
+                  <img src="https://www.anmosugoi.com/wp-content/uploads/2021/05/Hitori-Bocchi-no-Marumaru-Seikatsu-no-se-ha-olvidado-de-Bocchi-y-celebra-su-cumpleanos-4.jpg" class="card-img-top" alt="Bocchi">
+                  <div class="card-body">
+                    <h5 class="card-title">Bocchi</h5>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores quibusdam itaque quisquam repudiandae, tenetur iure amet officia fugiat maiores qui possimus ex facere! Laboriosam unde, reiciendis voluptate dolor quod doloremque?</p>
+                  </div>
+                </div>
+                <div class="card" style="width: 50rem;">
+                  <img src="http://pm1.narvii.com/6527/caa525ae2e5fa14182270ebec83a74350d9496cc_00.jpg" class="card-img-top" alt="Sakura">
+                  <div class="card-body">
+                    <h5 class="card-title">Sakura</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam aut voluptates vel reprehenderit commodi! Vel autem rerum accusamus, accusantium dignissimos rem quod, repudiandae explicabo, corrupti ad quae atque fuga tempora.</p>
+                  </div>
+                </div>
+                <div class="card" style="width: 50rem;">
+                  <img src="https://i.pinimg.com/550x/6a/67/ec/6a67ec619d0741ba5ff7f5afcb7ca5e4.jpg" class="card-img-top" alt="Yoh">
+                  <div class="card-body">
+                    <h5 class="card-title">Yoh</h5>
+                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus, tempore sed. Debitis, aliquam voluptatibus provident vel obcaecati similique doloremque non nulla inventore asperiores minima ipsa recusandae, necessitatibus ipsum laboriosam velit!</p>
+                  </div>
+                </div>
+                <div class="card" style="width: 50rem;">
+                  <img src="https://ramenparados.com/wp-content/uploads/2019/02/Hitori-Bocchi-no-Marumaru-Seikatsu7-1000x600.jpeg" class="card-img-top" alt="Bocchi">
+                  <div class="card-body">
+                    <h5 class="card-title">Bocchi again</h5>
+                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque libero, laboriosam ratione nostrum natus facere nisi nihil inventore praesentium quo ad qui possimus pariatur error rem, labore sit aut odit.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  </body>
+</html>
